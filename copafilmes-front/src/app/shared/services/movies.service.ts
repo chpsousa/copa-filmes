@@ -16,7 +16,7 @@ export class MoviesService {
   ) { }
 
   getMovies(): Observable<IMovie[]> {
-    const url = `https://copadefilmes.azurewebsites.net/api/movies`;
+    const url = `https://localhost:44341/api/movies`;
     return this.http.get<IMovie[]>(url)
       .pipe(
         map((data: IMovie[]) => {
@@ -27,7 +27,7 @@ export class MoviesService {
   }
 
   playChampionship(movies: IMovie[]): Observable<IMovie[]> {
-    const url = `https://copadefilmes.azurewebsites.net/api/movies`;
+    const url = `https://localhost:44341/api/movies`;
     const data = { Movies: movies };
     return this.http.post<IMovie[]>(url, data);
   }
