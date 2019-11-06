@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.page-header {
+    display: flex;
+    padding-left: 16px;
+    padding-right: 6px;
+    font-size: 16px;
+    border-bottom: 1px solid #DDD;
+  }
+  
+  .page-header .actions {
+    color: rgba(0, 0, 0, 0.54);
+    white-space: nowrap;
+  }
+  
+  .page-header h2.page-title {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 1.25em;
+    font-weight: normal;
+  }
+  
+  .page-header>.actions mat-icon[aria-label],
+  .page-header>.actions mat-icon[aria-label] {
+    opacity: 1;
+  }
+  
+  .page-header>.spacer,
+  .page-header>.spacer {
+    flex: 1 1 auto;
+  }
+  
+  .page-header {
+    height: 64px;
+  }
+  
+  .page-header>*,
+  .page-header>* {
+    line-height: 63px;
+    margin: 0px;
+  }
+  
+  .page-header>h2>a {
+    color: #1E88E5;
+  }
+  
+  .page-header mat-input-container {
+    margin-top: 5px;
+  }
+  
+  .page-header mat-input-container * {
+    line-height: normal;
+  }
+  
+  .page-container {
+    position: relative;
+    padding: 16px 16px 70px 16px !important;
+    margin: auto;
+    min-height: calc(100vh - 50px);
+    background-color: rgb(255, 255, 255);
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+  
+  .fill-space {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+  
+  /* header */
+  .mat-toolbar,
+  .mat-toolbar-row {
+    height: 50px !important;
+    min-height: 50px !important;
+  }
+  
+  mat-toolbar {
+    z-index: 6;
+    position: relative;
+  }
+  

@@ -1,0 +1,33 @@
+
+.page-container {
+    background-color: #fafafa;
+  }
+  
+  .page-container-sm {
+    padding: 0px 0px 70px 0px !important;
+  }
+  
+.type-card {
+    margin: 0.625em;
+  }
+
+  mat-card-actions button mat-icon {
+    color: rgba(0, 0, 0, .54);
+  }
+  
+  mat-card:focus {
+    outline: none;
+  }
+  
+  mat-card-title {
+    text-align: center;
+    word-break: normal;
+  }
+  
+  mat-card-subtitle {
+    text-align: center;
+  }
+  
+  mat-card:hover {
+    background-color: rgba(0, 0, 0, .01);
+  }

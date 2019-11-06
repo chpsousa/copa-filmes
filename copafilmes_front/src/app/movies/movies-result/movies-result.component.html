@@ -1,0 +1,108 @@
+<!-- <div class="page-container" fxFlex.gt-md="62%" ngClass.lt-sm="page-container-sm">
+
+    <div class="page-header" fxLayout="row">
+        <div fxFlex="100" fxLayoutAlign="start center">
+            <div fxFlex="100">
+                <h2 class="page-title">Campeonato de Filmes</h2>
+            </div>
+        </div>
+
+        <div fxFlex="none" class="actions" fxLayoutAlign="end center">
+            <button mat-raised-button type="button" [routerLink]="['/movies']" color="primary">
+                <mat-icon>send</mat-icon>
+                COMEÇAR NOVAMENTE
+            </button>
+        </div>
+
+    </div>
+
+    <br />
+
+    <div fxLayout="row" *ngIf="results">
+        <div fxFlex="100" fxLayoutAlign="center center">
+            <span style="font-size: 12px;">RESULTADO FINAL</span>
+        </div>
+    </div>
+
+    <br />
+
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" *ngIf="results">
+
+        <div fxLayout="row wrap" id="card-model">
+            <mat-card fxFlex="31" fxFlex.sm="47" fxFlex.lt-sm="100" class="type-card"
+                *ngFor="let movie of results; let i= index;" fxLayout="column" fxLayoutAlign="center center">
+                <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+                    <div mat-card-avatar>
+
+                    </div>
+                    <mat-card-title fxLayout="column" fxLayoutAlign="center center">{{ movie.titulo }}</mat-card-title>
+                    <mat-card-subtitle>
+                        {{movie.ano}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
+                    <mat-checkbox (change)="addOrRemoveMovie($event.checked, movie)">Selecionar</mat-checkbox>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+    </div>
+
+</div> -->
+
+<div class="page-container" fxFlex.gt-md="62%" ngClass.lt-sm="page-container-sm">
+
+    <div class="page-header" fxLayout="row">
+        <div fxFlex="100" fxLayoutAlign="start center">
+            <div fxFlex="100">
+                <h2 class="page-title">Campeonato de Filmes</h2>
+            </div>
+            <div fxFlex="100">
+                <h2 class="page-title">RESULTADO FINAL</h2>
+            </div>
+        </div>
+
+        <div fxFlex="none" class="actions" fxLayoutAlign="end center">
+            <button mat-raised-button type="button" [routerLink]="['/movies']" color="primary">
+                <mat-icon>send</mat-icon>
+                COMEÇAR NOVAMENTE
+            </button>
+        </div>
+
+    </div>
+
+    <br />
+
+    <div fxLayout="row" *ngIf="results">
+        <div fxFlex="100" fxLayoutAlign="center center">
+            <span style="font-size: 12px;">Veja o resultado final do Campeonato de Filmes de forma simples e rápida</span>
+        </div>
+    </div>
+
+    <br />
+
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" *ngIf="!results">
+        <div fxFlex="100" fxLayoutAlign="center center">
+            <span style="font-size: 12px;">Nenhum resultado disponível</span>
+        </div>
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" *ngIf="results">
+
+        <mat-list role="list" *ngFor="let movie of results; let i=index;">
+            <mat-list-item style="padding-top: 0 !important">
+                <div fxLayout="column" fxLayoutAlign="center center" fxFlex="15" fxFlex.md="35">
+                    <span class="number" *ngIf="i==0">1º</span>
+                    <span class="number" *ngIf="i==1">2º</span>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="center start" fxFlex="85" fxFlex.md="35">
+                    <span matLine>{{movie.titulo}}</span>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
+
+    </div>
+
+
+</div>

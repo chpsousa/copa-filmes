@@ -1,0 +1,57 @@
+<div class="page-container" fxFlex.gt-md="62%" ngClass.lt-sm="page-container-sm">
+
+    <div class="page-header" fxLayout="row">
+        <div fxFlex="100" fxLayoutAlign="start center">
+            <div fxFlex="100">
+                <h2 class="page-title">Campeonato de Filmes</h2>
+            </div>
+        </div>
+
+        <div fxFlex="none" class="actions" fxLayoutAlign="end center">
+            <button mat-raised-button type="button" (click)="generate()" color="primary">
+                <mat-icon>send</mat-icon>
+                GERAR MEU CAMPEONATO
+            </button>
+        </div>
+
+    </div>
+
+    <br />
+
+    <div fxLayout="row" *ngIf="movies">
+        <div fxFlex="100" fxLayoutAlign="center center">
+            <span style="font-size: 12px;">Selecione 8 filmes que você deseja que entrem na competição e depois
+                pressione o botão GERAR MEU CAMPEONATO para prosseguir</span>
+        </div>
+    </div>
+
+    <br />
+
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" *ngIf="!movies">
+        <div fxFlex="100" fxLayoutAlign="center center">
+                <span style="font-size: 12px;">Nenhum filme disponível</span>
+        </div>        
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" *ngIf="movies">
+
+        <div fxLayout="row wrap" id="card-model">
+            <mat-card fxFlex="31" fxFlex.sm="47" fxFlex.lt-sm="100" class="type-card" *ngFor="let movie of movies"
+                fxLayout="column" fxLayoutAlign="center center">
+                <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+                    <div mat-card-avatar>
+                    </div>
+                    <mat-card-title fxLayout="column" fxLayoutAlign="center center">{{ movie.titulo }}</mat-card-title>
+                    <mat-card-subtitle>
+                        {{movie.ano}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
+                    <mat-checkbox (change)="addOrRemoveMovie($event.checked, movie)">Selecionar</mat-checkbox>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+    </div>
+    
+</div>

@@ -1,0 +1,8 @@
+C:\repos\cf\CopaFilmes\CopaFilmes\CopaFilmes.Domain\obj\Debug\netstandard2.0\CopaFilmes.Domain.csprojAssemblyReference.cache
+C:\repos\cf\CopaFilmes\CopaFilmes\CopaFilmes.Domain\obj\Debug\netstandard2.0\CopaFilmes.Domain.AssemblyInfoInputs.cache
+C:\repos\cf\CopaFilmes\CopaFilmes\CopaFilmes.Domain\obj\Debug\netstandard2.0\CopaFilmes.Domain.AssemblyInfo.cs
+C:\repos\cf\CopaFilmes\CopaFilmes\CopaFilmes.Domain\bin\Debug\netstandard2.0\CopaFilmes.Domain.deps.json
+C:\repos\cf\CopaFilmes\CopaFilmes\CopaFilmes.Domain\bin\Debug\netstandard2.0\CopaFilmes.Domain.dll
+C:\repos\cf\CopaFilmes\CopaFilmes\CopaFilmes.Domain\bin\Debug\netstandard2.0\CopaFilmes.Domain.pdb
+C:\repos\cf\CopaFilmes\CopaFilmes\CopaFilmes.Domain\obj\Debug\netstandard2.0\CopaFilmes.Domain.dll
+C:\repos\cf\CopaFilmes\CopaFilmes\CopaFilmes.Domain\obj\Debug\netstandard2.0\CopaFilmes.Domain.pdb

@@ -1,0 +1,55 @@
+@import '~@angular/material/theming';
+
+@mixin set-styles($theme) {
+  $primary-palete: map-get($theme, primary);
+  $accent-palete: map-get($theme, accent);
+  $primary-color: mat-color($primary-palete);
+  $accent-color: mat-color($accent-palete);
+
+  :host::ng-deep button.mat-button {
+    border-left: 4px solid $accent-color;
+  }
+}
+
+// @include set-styles($main-theme);
+
+:host mat-toolbar:first-child {
+  padding: 0px 10px;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 50px);
+}
+
+mat-sidenav {
+  width: 232px;
+}
+
+:host::ng-deep .module-info button[mat-button] {
+  padding-right: 6px;
+}
+
+:host::ng-deep footer {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 12px;
+}
+
+@mixin menu-style($theme, $name) {
+  $accent-palete: map-get($theme, accent);
+  $accent-color: mat-color($accent-palete);
+  $accent-color-light: mat-color($accent-palete, 300);
+
+  .#{$name}-menu {
+    border-left: 3px solid $accent-color;
+    transition: background 0.2s linear;    
+  }
+
+  .#{$name}-menu:hover {
+    background-color: $accent-color-light !important;
+    color: #fff;
+  }
+}
