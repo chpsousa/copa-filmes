@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IMovie } from 'src/app/shared/models/movie.interface';
 import { MoviesService } from '../../shared/services/movies.service';
 import { MatSnackBar } from '@angular/material';
@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './movies-selection.component.html',
   styleUrls: ['./movies-selection.component.scss']
 })
-export class MoviesSelectionComponent implements OnInit {
+export class MoviesSelectionComponent implements OnInit, OnDestroy {
 
   movies: IMovie[] = new Array<IMovie>();
   results: IMovie[];
@@ -26,6 +26,11 @@ export class MoviesSelectionComponent implements OnInit {
 
   ngOnInit() {
     this.subscribe1 = this.moviesService.getMovies().subscribe(data => this.movies = data);
+  }
+
+  ngOnDestroy() {
+    if (this.subscribe1) this.subscribe1.unsubscribe();
+    if (this.subscribe2) this.subscribe2.unsubscribe();
   }
 
   addOrRemoveMovie(checked: boolean, movie: IMovie) {
