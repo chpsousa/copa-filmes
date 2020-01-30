@@ -3,8 +3,6 @@
 Projeto de exemplo de uma copa do mundo de filmes.
 Projeto composto por uma aplicação Angular 8 e API .NET Core 2.2.
 
-Para ver a aplicação funcionando [clique aqui](https://appcopafilmes.azurewebsites.net/movies)
-
 ## Código-fonte
 Para ter acesso ao código-fonte do projeto, clone o repositório
 
